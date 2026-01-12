@@ -1,4 +1,25 @@
-# 💤 LazyVim
+# LazyVim Config
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Personal [LazyVim](https://github.com/LazyVim/LazyVim) configuration.
+
+## Prerequisites
+
+### fzf
+
+Fast file finding for telescope:
+
+```bash
+brew install fzf
+```
+
+### wt
+
+Git worktree manager for running parallel Claude Code sessions:
+
+```bash
+curl -sSf https://raw.githubusercontent.com/amiller68/worktree/main/install.sh | bash
+```
+
+Commands: `wt new`, `wt list`, `wt open`, `wt rm`
+
+See: https://github.com/amiller68/wt
