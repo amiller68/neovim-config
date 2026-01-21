@@ -15,6 +15,7 @@ return {
     opts = {
       ensure_installed = {
         "nomicfoundation-solidity-language-server",
+        "vtsls",
       },
     },
   },
