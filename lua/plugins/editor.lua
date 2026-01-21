@@ -1,4 +1,15 @@
 return {
+  -- Inline git blame on current line
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = {
+        delay = 200,
+      },
+    },
+  },
+
   {
     "nmac427/guess-indent.nvim",
     config = function()

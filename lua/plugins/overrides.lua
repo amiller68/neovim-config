@@ -1,8 +1,8 @@
 return {
-  -- disable bufferline
+  -- bufferline with pinning support
   {
     "akinsho/bufferline.nvim",
-    enabled = false,
+    enabled = true,
   },
 
   -- super-tab + enter completion

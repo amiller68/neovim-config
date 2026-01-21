@@ -11,7 +11,7 @@ return {
 
   -- install language servers
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "nomicfoundation-solidity-language-server",
