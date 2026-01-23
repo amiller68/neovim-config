@@ -6,8 +6,8 @@ return {
         vtsls = {
           settings = {
             vtsls = {
-              autoUseWorkspaceTsdk = false,
-              memoryLimit = 4096,
+              autoUseWorkspaceTsdk = true,
+              memoryLimit = 8192,
               disableAutomaticTypingAcquisition = true,
             },
             typescript = {
@@ -17,6 +17,9 @@ return {
               suggestionActions = { enabled = false },
               implementationsCodeLens = { enabled = false },
               referencesCodeLens = { enabled = false },
+              tsserver = {
+                maxTsServerMemory = 8192,
+              },
             },
             javascript = {
               inlayHints = { parameterNames = { enabled = "none" } },
@@ -28,9 +31,9 @@ return {
             },
           },
           init_options = {
-            maxTsServerMemory = 4096,
+            maxTsServerMemory = 8192,
             tsserver = {
-              maxTsServerMemory = 4096,
+              maxTsServerMemory = 8192,
               disableAutomaticTypingAcquisition = true,
             },
           },
