@@ -11,6 +11,7 @@ return {
     opts = {
       keymap = {
         preset = "super-tab",
+        ["<C-j>"] = { "show", "show_documentation", "hide_documentation" },
         ["<Tab>"] = {
           function(cmp)
             if cmp.snippet_active() then
