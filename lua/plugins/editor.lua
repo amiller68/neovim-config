@@ -1,5 +1,6 @@
 return {
-  -- Inline git blame on current line
+  -- Inline git blame on current line. Deleted lines are shown by mini.diff's
+  -- overlay instead; gitsigns dropped its always-on show_deleted option.
   {
     "lewis6991/gitsigns.nvim",
     opts = {
@@ -7,6 +8,12 @@ return {
       current_line_blame_opts = {
         delay = 200,
       },
+      -- Highlight the changed words within a changed line
+      word_diff = true,
+    },
+    keys = {
+      { "<leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", desc = "Toggle word diff" },
+      { "<leader>gu", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline" },
     },
   },
 
