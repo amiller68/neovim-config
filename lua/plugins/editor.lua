@@ -8,8 +8,9 @@ return {
       current_line_blame_opts = {
         delay = 200,
       },
-      -- Highlight the changed words within a changed line
-      word_diff = true,
+      -- Off by default: on reflowed prose, rewrapping shifts words and the
+      -- intra-line highlights read as noise. Toggle per-buffer with <leader>gw.
+      word_diff = false,
     },
     keys = {
       { "<leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", desc = "Toggle word diff" },
