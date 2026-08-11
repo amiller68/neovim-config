@@ -21,6 +21,20 @@ return {
         listing_style = "tree",
         win_config = { position = "left", width = 35 },
       },
+      -- Upstream only binds q in the option and help panels, so q in the diff
+      -- itself falls through to vim's macro-record prefix. Close from anywhere
+      -- instead; inside these read-only diff buffers there's nothing to record.
+      keymaps = {
+        view = {
+          { "n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" } },
+        },
+        file_panel = {
+          { "n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" } },
+        },
+        file_history_panel = {
+          { "n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" } },
+        },
+      },
     },
   },
 }
