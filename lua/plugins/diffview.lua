@@ -5,11 +5,11 @@ return {
     "sindrets/diffview.nvim",
     cmd = { "DiffviewOpen", "DiffviewFileHistory", "DiffviewClose" },
     keys = {
-      { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "Diff uncommitted changes" },
+      -- gd is LazyVim's "Git Diff (files)" picker and gf/gl are its lazygit
+      -- history bindings, so diffview lives on gv ("view diff") instead
+      { "<leader>gv", "<cmd>DiffviewOpen<cr>", desc = "Diff uncommitted changes" },
+      { "<leader>gV", "<cmd>DiffviewFileHistory %<cr>", desc = "File history (current file)" },
       { "<leader>gD", "<cmd>DiffviewOpen HEAD~1<cr>", desc = "Diff including last commit" },
-      -- gf/gl are LazyVim's lazygit history bindings; v = "view history" instead
-      { "<leader>gv", "<cmd>DiffviewFileHistory %<cr>", desc = "File history (current file)" },
-      { "<leader>gV", "<cmd>DiffviewFileHistory<cr>", desc = "File history (branch)" },
       { "<leader>gq", "<cmd>DiffviewClose<cr>", desc = "Close diffview" },
     },
     opts = {
